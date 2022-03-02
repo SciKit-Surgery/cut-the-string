@@ -1,6 +1,6 @@
 # Cut the String
 
-This is a web based game developed to examine some of the challenges encountered in minimally invasive surgery. The game is developed using [Bill Reeds Phaser and webpack tutorial](https://snowbillr.github.io/blog/2018-04-09-a-modern-web-development-setup-for-phaser-3/).
+This is a web based game developed to examine some of the challenges encountered in minimally invasive surgery. The game is developed using [Bill Reed's Phaser and webpack tutorial](https://snowbillr.github.io/blog/2018-04-09-a-modern-web-development-setup-for-phaser-3/).
 
 As of now the game is an incomplete prototype, tested on Google Chrome. You may try it out [here](https://scikit-surgery.github.io/cut-the-string/).
 
