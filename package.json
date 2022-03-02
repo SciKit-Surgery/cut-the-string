@@ -2,7 +2,7 @@
   "name": "Cut-The-String",
   "version": "0.0.1",
   "description": "A browser game looking at the challenges of minimally invasive surgery.",
-  "repository": "https://www.github.com/thompson318/cut-the-string",
+  "repository": "https://www.github.com/SciKit-Surgery/cut-the-string",
   "author": "Stephen Thompson",
   "license": "BSD3",
   "private": true,
