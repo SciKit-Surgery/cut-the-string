@@ -8,12 +8,15 @@ webpackJsonp([0],[
 
 __webpack_require__(0);
 
-var _simpleScene = __webpack_require__(2);
+var _cutTheString = __webpack_require__(2);
 
 var gameConfig = {
-  width: 680,
-  height: 400,
-  scene: _simpleScene.SimpleScene
+  type: Phaser.AUTO,
+  width: 800,
+  height: 600,
+  backgroundColor: '#000088',
+  parent: 'phaser-example',
+  scene: _cutTheString.CutTheString
 };
 
 new Phaser.Game(gameConfig);
@@ -26,7 +29,7 @@ new Phaser.Game(gameConfig);
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -37,29 +40,92 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var SimpleScene = exports.SimpleScene = function (_Phaser$Scene) {
-  _inherits(SimpleScene, _Phaser$Scene);
+var CutTheString = exports.CutTheString = function (_Phaser$Scene) {
+    _inherits(CutTheString, _Phaser$Scene);
 
-  function SimpleScene() {
-    _classCallCheck(this, SimpleScene);
+    function CutTheString() {
+        _classCallCheck(this, CutTheString);
 
-    return _possibleConstructorReturn(this, (SimpleScene.__proto__ || Object.getPrototypeOf(SimpleScene)).apply(this, arguments));
-  }
+        var _this = _possibleConstructorReturn(this, (CutTheString.__proto__ || Object.getPrototypeOf(CutTheString)).call(this));
 
-  _createClass(SimpleScene, [{
-    key: 'preload',
-    value: function preload() {
-      this.load.image('cokecan', 'assets/cokecan.png');
+        _this.rope;
+        _this.count = 0;
+        return _this;
     }
-  }, {
-    key: 'create',
-    value: function create() {
-      this.add.text(100, 100, 'Hello Phaser!', { fill: '#0f0' });
-      this.add.image(100, 200, 'cokecan');
-    }
-  }]);
 
-  return SimpleScene;
+    _createClass(CutTheString, [{
+        key: 'preload',
+        value: function preload() {
+            this.load.image('bg', 'assets/background-grave.png');
+            this.load.image('snake', 'assets/pipe1.png');
+        }
+    }, {
+        key: 'create',
+        value: function create() {
+            this.add.image(400, 300, 'bg');
+            //(x.pos, y.pos, name, what?(texture frame), number_of_points) 
+            //the length of the rope is controlled by the image, i.e snake
+
+            //this is the rope we want to cut, can we set the points first
+            this.base_target_points = [];
+            this.target_points = [];
+            for (var i = 0; i < 32; i++) {
+                this.base_target_points.push(new Phaser.Math.Vector2(i * 800 / 31, 300));
+            }
+            this.target_points = this.base_target_points;
+            console.log(this.target_points);
+            this.target_rope = this.add.rope(0, 0, 'snake', null, this.target_points);
+
+            //  By providing 2 values to the `setAlphas` function
+            //  we can set the alpha across the whole Rope from top to bottom:
+            this.target_rope.setAlphas(1, 0.9);
+
+            //some stuff for drawing
+            this.lineGraphics = this.add.graphics();
+            this.input.on("pointerdown", this.startDrawing, this);
+            this.input.on("pointerup", this.stopDrawing, this);
+            this.input.on("pointermove", this.keepDrawing, this);
+            this.isDrawing = false;
+        }
+    }, {
+        key: 'startDrawing',
+        value: function startDrawing() {
+            this.isDrawing = true;
+        }
+    }, {
+        key: 'keepDrawing',
+        value: function keepDrawing(pointer) {
+            if (this.isDrawing) {
+                this.lineGraphics.clear();
+                this.lineGraphics.lineStyle(1, 0x00ff00);
+                this.lineGraphics.moveTo(pointer.downX, pointer.downY);
+                this.lineGraphics.lineTo(pointer.x, pointer.y);
+                this.lineGraphics.strokePath();
+            }
+        }
+    }, {
+        key: 'stopDrawing',
+        value: function stopDrawing(pointer) {
+            //this.lineGraphics.clear();
+            this.isDrawing = false;
+        }
+    }, {
+        key: 'update',
+        value: function update() {
+            this.count += 0.1;
+
+            //let points = this.target_rope.points;
+
+            for (var i = 0; i < this.target_points.length; i++) {
+                //we don't want to update until all the points are drawn
+                this.target_points[i].y = this.base_target_points[i].y + Math.sin(i * 0.15 + this.count) * 0.5;
+            }
+            //without setDirty the rope doesn't move
+            this.target_rope.setDirty();
+        }
+    }]);
+
+    return CutTheString;
 }(Phaser.Scene);
 
 /***/ })
