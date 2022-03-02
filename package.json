@@ -1,10 +1,10 @@
 {
-  "name": "phaser3-webpack-es6-dev-starter",
-  "version": "1.0.0",
-  "description": "A project starter for developing Phaser 3 games using Webpack and ES6.",
-  "repository": "https://www.github.com/snowbillr/phaser3-webpack-es6-dev-starter",
-  "author": "Bill Reed",
-  "license": "MIT",
+  "name": "Cut-The-String",
+  "version": "0.0.1",
+  "description": "A browser game looking at the challenges of minimally invasive surgery.",
+  "repository": "https://www.github.com/thompson318/cut-the-string",
+  "author": "Stephen Thompson",
+  "license": "BSD3",
   "private": true,
   "devDependencies": {
     "babel-core": "6",

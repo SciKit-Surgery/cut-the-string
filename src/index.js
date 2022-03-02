@@ -1,11 +1,14 @@
 import 'phaser';
 
-import { SimpleScene } from './scenes/simple-scene';
+import { CutTheString } from './scenes/cut-the-string';
 
 const gameConfig = {
-  width: 680,
-  height: 400,
-  scene: SimpleScene
+  type: Phaser.AUTO,
+  width: 800,
+  height: 600,
+  backgroundColor: '#000088',
+  parent: 'phaser-example',
+  scene: CutTheString
 };
 
 new Phaser.Game(gameConfig);
