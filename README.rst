@@ -21,20 +21,23 @@ Game Mechanics
 --------------
 
 The game is inspired by research into endoscopic mosaicking applied to fetal surgery to 
-treat `twin to twin transfusion syndrome`_. One treatment for this is to cut the blood vessels that allow the transfer of blood between fetuses. We represent this treatment with a simple string cutting game where the user is required to cut strings using the mouse or touch screen. 
+treat `twin to twin transfusion syndrome`_. One treatment for this is to cut blood vessels within the placenta that allow the transfer of blood between fetuses. cut-the-string represents this treatment with an abstract string cutting game. 
 
-The game progress through levels, progressively introducing more challenges as seen in surgery. Something like:
+The player is presented with a screen showing a representation of two fetuses sharing a common blood supply. Some strings (or vessels) run from the common supply to a single fetus, some strings link the fetuses directly. The player is required to identify those linking strings and cut them, whilst avoiding strings that supply only one fetus, like in `this video from GIFT-Surg`_. 
+
+The game progress through levels. The game mechanics remain the same, with the player being required to identify and cut string, however we progressively introduce more challenges to make it more like surgery. Something like:
 
 0. Level 0, only one string.
 1. Multiple strings.
 2. Strings are moving. 
-3. Occlusion and poor lighting
+3. Occlusion, poor lighting, and image noise
 5. Partial visibility, as would be the case for endoscopic treatment.
-
-Finally we introduce mosaicking like in `Tella et al. 2016`_ to explore how our research can address some of these challenges. 
+6. Finally we introduce mosaicking like in `Tella et al. 2016`_ to explore how our research can address some of these challenges. 
 
 Target Audience
 ---------------
+
+The game mechanics and appearance are intended to be suitable for all age groups. The scientific content is targeted at people interested in treatment for `twin to twin transfusion syndrome`_ or for endoscopic vasculature surgery more generally.
 
 
 Using This Project
@@ -71,3 +74,4 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`Bill Reed's Phaser and webpack tutorial`: https://snowbillr.github.io/blog/2018-04-09-a-modern-web-development-setup-for-phaser-3/
 .. _`twin to twin transfusion syndrome`: https://en.wikipedia.org/wiki/Twin-to-twin_transfusion_syndrome
 .. _`Tella et al. 2016`: https://discovery.ucl.ac.uk/id/eprint/1495954/
+.. _`this video from GIFT-Surg`: https://youtu.be/XhKJiaZyke0?t=83
