@@ -25,19 +25,16 @@ treat `twin to twin transfusion syndrome`_. One treatment for this is to cut blo
 
 The player is presented with a screen showing a representation of two fetuses sharing a common blood supply. Some strings (or vessels) run from the common supply to a single fetus, some strings link the fetuses directly. The player is required to identify those linking strings and cut them, whilst avoiding strings that supply only one fetus, like in `this video from GIFT-Surg`_.
 
-.. raw:: html
-
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/XhKJiaZyke0?start=90" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
 The game progress through levels. The game mechanics remain the same, with the player being required to identify and cut string, however we progressively introduce more challenges to make it more like surgery. Something like:
 
 0. Level 0, only one string.
 1. Multiple strings.
 2. Strings are moving.
-3. Occlusion, poor lighting, and image noise.
-5. Partial visibility, as would be the case for endoscopic treatment.
-6. Finally we introduce mosaicking like in `Tella et al. 2016`_ to explore how our research can address some of these challenges. 
+3. Occlusion.
+4. Poor lighting
+5. Image noise.
+6. Partial visibility, as would be the case for endoscopic treatment.
+7. Finally we introduce mosaicking like in `Tella et al. 2016`_ to explore how our research can address some of these challenges. 
 
 Target Audience
 ---------------
