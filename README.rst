@@ -11,9 +11,9 @@ Cut the String
 Author: Stephen Thompson
 
 
-cut-the-string is a browser based game developed to examine some of the challenges encountered in minimally invasive surgery. The game is developed using [Bill Reed's Phaser and webpack tutorial](https://snowbillr.github.io/blog/2018-04-09-a-modern-web-development-setup-for-phaser-3/).
+cut-the-string is a browser based game developed to examine some of the challenges encountered in minimally invasive surgery. The game is developed using `Bill Reed's Phaser and webpack tutorial`_
 
-As of now the game is an incomplete prototype, tested on Google Chrome. You may try it out [here](https://scikit-surgery.github.io/cut-the-string/).
+As of now the game is an incomplete prototype, tested on Google Chrome. You may try it out `here`_.
 
 cut-the-string is developed with the support of the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_ as part of the `SciKit-Surgery`_ software project.
 
@@ -21,7 +21,7 @@ Game Mechanics
 --------------
 
 The game is inspired by research into endoscopic mosaicking applied to fetal surgery to 
-treat [twin to twin transfusion syndrome](https://en.wikipedia.org/wiki/Twin-to-twin_transfusion_syndrome). One treatment for this is to cut the blood vessels that allow the transfer of blood between fetuses. We represent this treatment with a simple string cutting game where the user is required to cut strings using the mouse or touch screen. 
+treat `twin to twin transfusion syndrome`_. One treatment for this is to cut the blood vessels that allow the transfer of blood between fetuses. We represent this treatment with a simple string cutting game where the user is required to cut strings using the mouse or touch screen. 
 
 The game progress through levels, progressively introducing more challenges as seen in surgery. Something like:
 
@@ -31,11 +31,14 @@ The game progress through levels, progressively introducing more challenges as s
 3. Occlusion and poor lighting
 5. Partial visibility, as would be the case for endoscopic treatment.
 
-Finally we introduce mosaicking like in [this paper](https://discovery.ucl.ac.uk/id/eprint/1495954/) to show how our research can address some of these challenges. 
+Finally we introduce mosaicking like in `Tella et al. 2016`_ to explore how our research can address some of these challenges. 
+
+Target Audience
+---------------
 
 
-
-## Using This Project
+Using This Project
+------------------
 
 0. Make a directory somewhere in your file system where you want to keep your project.
 1. `cd` into that directory from the command line.
@@ -64,4 +67,7 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`license file`: https://github.com/SciKit-Surgery/what-is-it/blob/master/LICENSE
 .. _`SciKit-Surgery`: https://github.com/SciKit-Surgery/
 .. _`Wellcome EPSRC Centre for Interventional and Surgical Sciences`: http://www.ucl.ac.uk/weiss
-
+.. _`here`: https://scikit-surgery.github.io/cut-the-string/)
+.. _`Bill Reed's Phaser and webpack tutorial`: https://snowbillr.github.io/blog/2018-04-09-a-modern-web-development-setup-for-phaser-3/
+.. _`twin to twin transfusion syndrome`: https://en.wikipedia.org/wiki/Twin-to-twin_transfusion_syndrome
+.. _`Tella et al. 2016`: https://discovery.ucl.ac.uk/id/eprint/1495954/
