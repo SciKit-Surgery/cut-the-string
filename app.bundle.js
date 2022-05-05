@@ -23,7 +23,9 @@ var gameConfig = {
   scene: _cutTheString.CutTheString
 };
 
-new _phaser2.default.Game(gameConfig);
+var game = new _phaser2.default.Game(gameConfig);
+
+game();
 
 /***/ }),
 /* 2 */
@@ -35,8 +37,15 @@ new _phaser2.default.Game(gameConfig);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.CutTheString = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _phaser = __webpack_require__(0);
+
+var _phaser2 = _interopRequireDefault(_phaser);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -52,7 +61,6 @@ var CutTheString = exports.CutTheString = function (_Phaser$Scene) {
 
     var _this = _possibleConstructorReturn(this, (CutTheString.__proto__ || Object.getPrototypeOf(CutTheString)).call(this));
 
-    _this.rope;
     _this.count = 0;
     return _this;
   }
@@ -74,7 +82,7 @@ var CutTheString = exports.CutTheString = function (_Phaser$Scene) {
       this.base_target_points = [];
       this.target_points = [];
       for (var i = 0; i < 32; i++) {
-        this.base_target_points.push(new Phaser.Math.Vector2(i * 800 / 31, 300));
+        this.base_target_points.push(new _phaser2.default.Math.Vector2(i * 800 / 31, 300));
       }
       this.target_points = this.base_target_points;
       console.log(this.target_points);
@@ -130,7 +138,7 @@ var CutTheString = exports.CutTheString = function (_Phaser$Scene) {
   }]);
 
   return CutTheString;
-}(Phaser.Scene);
+}(_phaser2.default.Scene);
 
 /***/ })
 ],[1]);
