@@ -11,4 +11,6 @@ const gameConfig = {
   scene: CutTheString
 }
 
-new Phaser.Game(gameConfig)
+const game = new Phaser.Game(gameConfig)
+
+game()
