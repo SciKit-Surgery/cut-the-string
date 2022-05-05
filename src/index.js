@@ -1,4 +1,4 @@
-import 'phaser'
+import Phaser from 'phaser'
 
 import { CutTheString } from './scenes/cut-the-string'
 
