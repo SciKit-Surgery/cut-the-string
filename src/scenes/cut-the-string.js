@@ -1,8 +1,9 @@
+import Phaser from 'phaser'
+
 export class CutTheString extends Phaser.Scene {
   constructor () {
     super()
 
-    this.rope
     this.count = 0
   }
 

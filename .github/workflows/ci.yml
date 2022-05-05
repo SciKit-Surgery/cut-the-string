@@ -13,6 +13,10 @@ jobs:
           yarn install
           yarn run webpack
 
+      - name: lint
+        run: |
+          yarn lint
+
       - name: Deploy from master 🚀
         if: github.ref == 'refs/heads/master'
         uses: JamesIves/github-pages-deploy-action@4.1.3
