@@ -1,6 +1,6 @@
-import 'phaser';
+import Phaser from 'phaser'
 
-import { CutTheString } from './scenes/cut-the-string';
+import { CutTheString } from './scenes/cut-the-string'
 
 const gameConfig = {
   type: Phaser.AUTO,
@@ -9,6 +9,8 @@ const gameConfig = {
   backgroundColor: '#000088',
   parent: 'phaser-example',
   scene: CutTheString
-};
+}
 
-new Phaser.Game(gameConfig);
+const game = new Phaser.Game(gameConfig)
+
+game()
