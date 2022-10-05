@@ -75,7 +75,7 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`license file`: https://github.com/SciKit-Surgery/what-is-it/blob/master/LICENSE
 .. _`SciKit-Surgery`: https://github.com/SciKit-Surgery/
 .. _`Wellcome EPSRC Centre for Interventional and Surgical Sciences`: http://www.ucl.ac.uk/weiss
-.. _`here`: https://scikit-surgery.github.io/cut-the-string/)
+.. _`here`: https://scikit-surgery.github.io/cut-the-string/
 .. _`Bill Reed's Phaser and webpack tutorial`: https://snowbillr.github.io/blog/2018-04-09-a-modern-web-development-setup-for-phaser-3/
 .. _`twin to twin transfusion syndrome`: https://en.wikipedia.org/wiki/Twin-to-twin_transfusion_syndrome
 .. _`Tella et al. 2016`: https://discovery.ucl.ac.uk/id/eprint/1495954/
