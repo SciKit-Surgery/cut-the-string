@@ -8,7 +8,7 @@ export class CutTheString extends Phaser.Scene {
   }
 
   preload () {
-    this.load.image('bg', 'assets/sdjbackground-grave.png')
+    this.load.image('bg', 'assets/new_background')
     this.load.image('snake', 'assets/pipe1.png')
   }
 
