@@ -68,7 +68,7 @@ var CutTheString = exports.CutTheString = function (_Phaser$Scene) {
   _createClass(CutTheString, [{
     key: 'preload',
     value: function preload() {
-      this.load.image('bg', 'assets/new_background.png');
+      this.load.image('bg', 'assets/new_background');
       this.load.image('snake', 'assets/pipe1.png');
     }
   }, {
