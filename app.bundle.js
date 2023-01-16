@@ -69,7 +69,7 @@ var CutTheString = exports.CutTheString = function (_Phaser$Scene) {
     key: 'preload',
     value: function preload() {
       this.load.image('bg', 'assets/new_background');
-      this.load.image('snake', 'assets/pipe1.png');
+      this.load.image('snake', 'assets/pipe.png');
     }
   }, {
     key: 'create',
