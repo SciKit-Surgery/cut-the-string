@@ -1,6 +1,6 @@
 import Phaser from 'phaser'
 
-import { CutTheString } from './scenes/cut-the-string'
+import { CutTheString } from './scenes/rectangle'
 
 const gameConfig = {
   type: Phaser.AUTO,
