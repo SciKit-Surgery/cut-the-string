@@ -1,22 +1,8 @@
-import Phaser from 'phaser'
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import javax.swing.JPanel;
-
-export class CutTheString extends Phaser.Scene {
-    MyPanel(){
-        this.setPreferredSize(new Dimension(500,500));
-    }
-    public void paint(Graphics g) {
-        Graphics2D g2D = (Graphics2D) g;
-        g2D.setPaint(Color.blue); // colour of line
-        g2D.setStroke(new BasicStroke(5)); //thickeness of line 
-        g2D.drawline(0, 0, 500, 500);
-
-        g2D.drawRect(0, 0, 100, 200);
-    }
-}
-
-
-
+// 2x 2D rectangles next to eachother
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.rect(10, 10, 120, 80);
+// a second rectangle inline withe the first 
+ctx.rect(130, 10, 120, 80);
+ctx.stroke();
